@@ -1,5 +1,5 @@
 {
-  "name": "redux-use-example",
+  "name": "redux-route-use-example",
   "version": "1.0.0",
   "description": "For Practicing Redux, React and Router",
   "main": "index.js",
