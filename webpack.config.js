@@ -10,14 +10,17 @@ const WriteFilePlugin = require("write-file-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   devtool: "inline-source-map",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    // publicPath: '/',
+    filename: "[name][hash].js",
+  },
   //For Hot Module Replacement
   devServer: {
     contentBase: "./dist",
     hot: true,
-  },
-  output: {
-    filename: "[name][hash].js",
-    path: path.resolve(__dirname, "dist"),
+    // For refreshing page to redirect to index.html
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -165,7 +168,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HWP({
       template: path.join(__dirname, "./public/index.html"),
-      filename: "index.html",
+      // filename: "index.html",
       // chunks: ['index']
     }),
     new MiniCssExtractPlugin({

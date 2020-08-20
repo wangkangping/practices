@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router,
   Route,
   hashHistory,
+  browserHistory,
   Switch,
 } from "react-router-dom";
 
@@ -16,7 +17,7 @@ import CompleteTodoList from "./routes/CompleteTodoList";
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
       <Route path="/">
         <APP></APP>
         <Switch>
@@ -25,6 +26,7 @@ ReactDOM.render(
           <Route path="/complete" component={CompleteTodoList} />
         </Switch>
       </Route>
+      <Route path="/complete" component={CompleteTodoList} />
     </Router>
   </Provider>,
   document.getElementById("root")
