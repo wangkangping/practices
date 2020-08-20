@@ -26,7 +26,6 @@ ReactDOM.render(
           <Route path="/complete" component={CompleteTodoList} />
         </Switch>
       </Route>
-      <Route path="/complete" component={CompleteTodoList} />
     </Router>
   </Provider>,
   document.getElementById("root")
