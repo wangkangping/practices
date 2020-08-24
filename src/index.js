@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import {
   BrowserRouter as Router,
   Route,
-  hashHistory,
   browserHistory,
   Switch,
 } from "react-router-dom";
